@@ -1,0 +1,19 @@
+/* 1. Assurez-vous que l'élément racine (<html>) utilise toute la hauteur du viewport */
+:root {
+  height: 100%;
+}
+
+/* 2. Assurez-vous que le corps du document (<body>) utilise toute la hauteur disponible */
+body {
+  /* Supprimer les marges par défaut que certains navigateurs ajoutent */
+  margin: 0;
+  height: 100%; 
+}
+
+/* 3. Appliquez les styles de fond à l'élément 'body' (recommandé) */
+body {
+  background-image: url(src/assets/img1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,16 @@
+:root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%; 
+}
+
+/* 3. Appliquez les styles de fond à l'élément 'body' (recommandé) */
+body {
+  background-image: url(src/assets/img1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

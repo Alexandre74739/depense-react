@@ -1,0 +1,28 @@
+:root {
+  height: 100%;
+}
+
+body {
+  background-image: url(src/assets/img-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  color: aliceblue;
+}
+
+.container {
+  
+  background-color: transparent;
+  border: 2px solid aliceblue;
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  padding: 20px 40px;
+  transition: all 0.3s ease-in;
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 0;
+  }
+}

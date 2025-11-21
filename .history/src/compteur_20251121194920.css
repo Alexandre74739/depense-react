@@ -1,0 +1,56 @@
+/* =================================
+   STYLES DU COMPTEUR ET DES INPUTS
+   ================================= */
+
+/* Fichier Compteur.css */
+
+.compteur-controls {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* ... autres styles des inputs ... */
+
+@media (max-width: 600px) {
+    .compteur-controls {
+        /* Force les éléments à s'empiler verticalement */
+        flex-direction: column; 
+        /* Élargit les inputs pour prendre toute la largeur disponible dans le conteneur */
+        align-items: stretch;
+    }
+}
+
+.compteur-controls input {
+    padding: 12px 18px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    
+    /* Style Flottant/Transparent */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond très légèrement blanc/transparent */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Bordure semi-transparente */
+    color: var(--color-text, #e0f7fa); /* Couleur du texte dans l'input */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    
+    /* Pour supprimer la couleur de fond des navigateurs (Chrome/Firefox) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Style lors du focus */
+.compteur-controls input:focus {
+    outline: none; /* Supprimer l'outline par défaut */
+    border-color: var(--color-primary, #8aa9ff); /* Bordure principale */
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px var(--color-primary, #8aa9ff);
+}
+
+.compteur-controls input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.compteur-controls input[type="month"] {
+    width: 150px; 
+}

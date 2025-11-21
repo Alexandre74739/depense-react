@@ -1,0 +1,61 @@
+:root {
+  --color-primary: #8aa9ff;
+  --color-text: #e0f7fa;
+  --color-background: #1e3a8a;
+  --blur-intensity: 15px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--color-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(src/assets/img-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Rend l'effet plus agréable lors du défilement */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3); /* Fond légèrement transparent pour la profondeur */
+  border: 2px solid var(--color-primary);
+  border-radius: 20px; /* Légèrement plus arrondi */
+  backdrop-filter: blur(var(--blur-intensity));
+  padding: 30px 50px; /* Augmenter le padding */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+  transition: all 0.3s ease-in;
+}
+
+.container h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.container p {
+    font-size: 1.1rem;
+    max-width: 450px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 30px;
+    min-height: auto; 
+    margin: 20px;
+    justify-content: center;
+  }
+
+  .container h1 {
+    font-size: 2.2rem;
+  }
+}

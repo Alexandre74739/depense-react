@@ -1,0 +1,70 @@
+:root {
+  --color-primary: #8aa9ff;
+  --color-text: #e0f7fa;
+  --color-background: #1e3a8a;
+  --blur-intensity: 16px;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(src/assets/img-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* Rend l'effet plus agréable lors du défilement */
+
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--color-primary);
+  border-radius: 20px;
+  backdrop-filter: blur(var(--blur-intensity));
+  padding: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in;
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  p {
+    font-size: 1.25rem;
+    max-width: 450px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 30px;
+    min-height: auto;
+    margin: 20px;
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+
+}

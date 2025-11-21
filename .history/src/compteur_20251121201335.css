@@ -1,0 +1,63 @@
+.compteur-controls {
+    display: flex;
+    gap: 20px;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.compteur-controls input {
+    /* Styles pour rendre les inputs plus petits */
+    padding: 10px 15px; 
+    font-size: 1rem; 
+    
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--color-text, #e0f7fa);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    /* MODIFICATION CLÉ 1: Conserver une taille égale et s'adapter */
+    flex-grow: 1; 
+    
+    /* MODIFICATION CLÉ 2: Définir une taille de base plus petite pour les inputs */
+    /* Utilisez `flex-basis` (ou `width`) pour définir leur taille initiale */
+    width: 150px; /* Taille de base souhaitée (vous pouvez ajuster cette valeur) */
+    
+    box-sizing: border-box; 
+    /* Suppression du min-width pour plus de flexibilité */
+}
+
+.compteur-controls input[type="month"]::-webkit-calendar-picker-indicator {
+    filter: 
+        invert(1)
+        saturate(5)
+        hue-rotate(200deg);
+}
+
+.compteur-controls input:focus {
+    outline: none;
+    border-color: var(--color-primary, #8aa9ff);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px var(--color-primary, #8aa9ff);
+}
+
+.compteur-controls input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 600px) {
+    .compteur-controls {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+
+    .compteur-controls input {
+        width: 100%; 
+        flex-grow: 0; 
+        min-width: auto;
+    }
+}

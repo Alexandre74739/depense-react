@@ -1,0 +1,58 @@
+.compteur-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.compteur-controls input {
+    padding:16px 24px;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--color-text, #e0f7fa);
+    color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    flex-grow: 1; 
+    box-sizing: border-box; 
+    max-width: 450px; 
+}
+
+
+.compteur-controls input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: 
+        invert(1)
+        saturate(5)
+        hue-rotate(200deg);
+}
+
+.compteur-controls input:focus {
+    outline: none;
+    border-color: var(--color-primary, #8aa9ff);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px var(--color-primary, #8aa9ff);
+}
+
+.compteur-controls input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .compteur-controls {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+
+    .compteur-controls input {
+        width: 100%; 
+        flex-grow: 0; 
+        min-width: auto;
+        font-size: 1.1rem;
+    }
+}
