@@ -58,6 +58,9 @@ input::placeholder {
 
 .submit:hover {
     transform: translateY(-4px);
+    outline: none;
+    border-color:#8aa9ff;
+    background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 15px #8aa9ff;
 }
 

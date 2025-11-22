@@ -12,7 +12,7 @@
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    color:#e0f7fa;
+    color: var(--color-text, #e0f7fa);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     -webkit-appearance: none;
@@ -26,14 +26,13 @@
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
-    cursor: pointer;
 }
 
 input:focus {
     outline: none;
-    border-color:#8aa9ff;
+    border-color: var(--color-primary, #8aa9ff);
     background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 15px #8aa9ff;
+    box-shadow: 0 0 15px var(--color-primary, #8aa9ff);
 }
 
 input::placeholder {
@@ -46,7 +45,7 @@ input::placeholder {
     border-radius: 10px;
     background-color: #1e3a8a;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    color: #e0f7fa;
+    color: var(--color-text, #e0f7fa);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     appearance: none;
@@ -58,7 +57,7 @@ input::placeholder {
 
 .submit:hover {
     transform: translateY(-4px);
-    box-shadow: 0 0 15px #8aa9ff;
+    transform: scale(1.01);
 }
 
 @media (max-width: 768px) {

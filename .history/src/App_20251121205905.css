@@ -14,6 +14,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;  /* Rend l'effet plus agréable lors du défilement */
+
 }
 
 .container {
@@ -63,4 +64,6 @@ body {
       font-size: 1.1rem;
     }
   }
+
+
 }

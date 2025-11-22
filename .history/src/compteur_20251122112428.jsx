@@ -6,7 +6,7 @@ function Compteur() {
         <div className="compteur-controls"> 
             <input type="date" />
             <input type="number" placeholder="Montant du mois en €" />
-            <button className="submit">Analyser</button>
+            <button></button>
         </div>
     )
 }

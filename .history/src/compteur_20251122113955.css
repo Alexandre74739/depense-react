@@ -58,7 +58,6 @@ input::placeholder {
 
 .submit:hover {
     transform: translateY(-4px);
-    box-shadow: 0 0 15px #8aa9ff;
 }
 
 @media (max-width: 768px) {
