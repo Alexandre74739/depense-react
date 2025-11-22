@@ -12,7 +12,7 @@ function Compteur() {
 
     // tableau mise à jour avec date et number
     const addSpend = () => {
-        setSpend([...spend, {date, number }]);
+        setSpend([...spend, { revarsedate, number }]);
 
         // Suppression des données dans les inputs
         setDate("");

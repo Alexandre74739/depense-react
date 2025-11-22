@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from "react";
+import { useCallback, useState,  } from "react";
 import './Compteur.css';
 
 function Compteur() {
@@ -6,13 +6,10 @@ function Compteur() {
     const [number, setNumber] = useState(0)
     const [spend, setSpend] = useState([]);
 
-    useEffect(() => {
-        console.log(spend);
-    }, [spend]);
-
     // tableau mise à jour avec date et number
     const addSpend = () => {
-        setSpend([...spend, {date, number }]);
+        setSpend([...spend, {date, number}]);
+        console.log(spend);
 
         // Suppression des données dans les inputs
         setDate("");

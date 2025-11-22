@@ -6,13 +6,13 @@ function Compteur() {
     const [number, setNumber] = useState(0)
     const [spend, setSpend] = useState([]);
 
-    useEffect(() => {
-        console.log(spend);
+useEffect(() => {
+        console.log("Liste des dépenses mise à jour :", spend);
     }, [spend]);
 
     // tableau mise à jour avec date et number
     const addSpend = () => {
-        setSpend([...spend, {date, number }]);
+        setSpend([...spend, {date, number}]);
 
         // Suppression des données dans les inputs
         setDate("");

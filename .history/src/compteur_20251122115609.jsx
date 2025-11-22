@@ -1,0 +1,26 @@
+import { useCallback, useState } from "react";
+import './Compteur.css';
+
+function Compteur() {
+    const [date, setDate] = useState("");
+    const [number, setNumber] = useState(0)
+    const [spend, setSpend] = useState([]);
+
+    return (
+        <div className="compteur-controls"> 
+            <input 
+            type="date" 
+            value={date} />
+            <input 
+            type="number" 
+            value={number} 
+            placeholder="Montant du mois en €" />
+            <button 
+            className="submit">
+                Analyser
+                </button>
+        </div>
+    )
+}
+
+export default Compteur;
