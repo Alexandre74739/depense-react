@@ -69,7 +69,7 @@ function Compteur() {
             </div>
 
             {/* Affichage du total uniquement si il y a au moins une dépense */}
-            {spend.length > 0 && (
+            {spend.length > 0 && (  // && -> expression vrai fait ...
                 <div className="total-container">
                     <p>Le total des dépense est de : {total} €</p>
                 </div>

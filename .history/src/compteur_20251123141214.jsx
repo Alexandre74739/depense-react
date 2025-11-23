@@ -5,7 +5,7 @@ function Compteur() {
     const [date, setDate] = useState("");
     const [number, setNumber] = useState(0)
     const [spend, setSpend] = useState([]);
-    const [total, setTotal] = useState(0);
+    const [total]
 
     // Converti une date en format JJ/MM/AAAA
     const formatDate = (dateString) => {
@@ -20,13 +20,11 @@ function Compteur() {
     // Vérifie qu'il y ait une date et un nombre de remplis dans les inputs
     const isValid = date !== "" && number !== "";
 
-    // Tableau mise à jour avec date et number
+    // tableau mise à jour avec date et number
     const addSpend = () => {
         if (!isValid) return;
+
         setSpend([...spend, { date, number }]);
-            
-        // Calcul le total des dépenses
-        setTotal(prevTotal => prevTotal + parseFloat(number)); // prevTotal est la valeur la plus récente
 
         // Suppression des données dans les inputs
         setDate("");
@@ -56,7 +54,6 @@ function Compteur() {
                 </button>
 
             </div>
-
             {/* Affichage des cards */}
             <div className="card-container">
                 {spend.map((item, index) => (
@@ -67,13 +64,6 @@ function Compteur() {
                     </div>
                 ))}
             </div>
-
-            {/* Affichage du total uniquement si il y a au moins une dépense */}
-            {spend.length > 0 && (
-                <div className="total-container">
-                    <p>Le total des dépense est de : {total} €</p>
-                </div>
-            )}
         </div>
     )
 }

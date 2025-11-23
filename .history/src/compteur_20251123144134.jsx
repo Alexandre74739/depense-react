@@ -20,12 +20,12 @@ function Compteur() {
     // Vérifie qu'il y ait une date et un nombre de remplis dans les inputs
     const isValid = date !== "" && number !== "";
 
-    // Tableau mise à jour avec date et number
+    // tableau mise à jour avec date et number
     const addSpend = () => {
         if (!isValid) return;
         setSpend([...spend, { date, number }]);
             
-        // Calcul le total des dépenses
+        //Calcul le total des dépenses
         setTotal(prevTotal => prevTotal + parseFloat(number)); // prevTotal est la valeur la plus récente
 
         // Suppression des données dans les inputs
@@ -69,11 +69,10 @@ function Compteur() {
             </div>
 
             {/* Affichage du total uniquement si il y a au moins une dépense */}
-            {spend.length > 0 && (
-                <div className="total-container">
-                    <p>Le total des dépense est de : {total} €</p>
-                </div>
-            )}
+            {spend.length}
+            <div className="total-container">
+                <p>Le total des dépense est de : {total} €</p>
+            </div>
         </div>
     )
 }

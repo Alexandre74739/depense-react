@@ -125,11 +125,10 @@
 }
 
 .total-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    margin-top: 2rem;
+    max-width: 550px; 
+    margin: 1.5rem auto 0 auto;
+    padding: 20px 25px;
     background-color: rgba(30, 58, 138, 0.8);
     color: #e0f7fa;
     font-size: 1.25rem;
@@ -137,10 +136,16 @@
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    text-align: ;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
+
+.total-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px #8aa9ff;
+}
+
 
 @media (max-width: 768px) {
     .main-items {

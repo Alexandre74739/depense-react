@@ -140,6 +140,13 @@
     text-align: center;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+.total-container.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (max-width: 768px) {

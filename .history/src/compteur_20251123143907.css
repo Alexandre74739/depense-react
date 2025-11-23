@@ -124,6 +124,10 @@
     }
 }
 
+.total {
+    display: none;
+}
+
 .total-container {
     display: flex;
     justify-content: center;

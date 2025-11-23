@@ -73,7 +73,6 @@
 
     .card {
         width: 100%;
-        max-width: 550px;
         padding: 20px 25px;
         display: flex;
         justify-content: space-between;
@@ -125,9 +124,6 @@
 }
 
 .total-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     margin-top: 2rem;
     background-color: rgba(30, 58, 138, 0.8);
@@ -140,6 +136,11 @@
     text-align: center;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+}
+
+.total-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px #8aa9ff;
 }
 
 @media (max-width: 768px) {

@@ -125,7 +125,7 @@
 }
 
 .total-container {
-    display: flex;
+    display: flex;           /* active flex */
     justify-content: center;
     align-items: center;
     width: 100%;
