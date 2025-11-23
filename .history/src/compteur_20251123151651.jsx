@@ -30,25 +30,24 @@ function Compteur() {
             number: parseFloat(number)
         };
 
-        setSpend([...spend, newSpend]);
+        setSpend([...spend, { date, number }]);
 
         // Calcul le total des dépenses
-        setTotal(prevTotal => prevTotal + newSpend.number);
+        setTotal(prevTotal => prevTotal + parseFloat(number)); // prevTotal est la valeur la plus récente
 
-        // Réinitialise les inputs
+        // Suppression des données dans les inputs
         setDate("");
         setNumber(0);
-    };
+    }
 
     // Suppression d'une dépense
     const deleteSpend = (id) => {
-        const itemDelete = spend.find(item => item.id === id);
-        setTotal(prevTotal => prevTotal - itemDelete.number);
+    const itemDelete = spend.find(item => item.id === id);
+    if (!itemDelete) return;
 
-        // Met à jour le tableau spend en gardant tous les éléments sauf celui dont l’id correspond à celui à supprimer
-        setSpend(spend.filter(item => item.id !== id));
-    };
-
+    setTotal(prevTotal => prevTotal - itemDelete.number);
+    setSpend(spend.filter(item => item.id !== id));
+};
 
     return (
         <div className="compteur-controls">
@@ -77,21 +76,20 @@ function Compteur() {
             {/* Affichage des cards */}
             <div className="card-container">
                 {spend
-                    .slice()
-                    .sort((a, b) => new Date(a.date) - new Date(b.date))
-                    .map((item) => (
-                        <div key={item.id} className="card">
+                    .slice()    // Copie le tableau pour ne pas modifier directement le state
+                    .sort((a, b) => new Date(a.date) - new Date(b.date))    // Tri croissant
+                    .map((item, index) => (
+                        <div key={index} className="card">
                             <p className="date">{formatDate(item.date)}</p>
                             <p>Dépense : {item.number} €</p>
                             <button
                                 className="delete-btn"
-                                onClick={() => deleteSpend(item.id)}
+                                onClick={() => deleteSpend(index)}
                             >
                                 X
                             </button>
                         </div>
                     ))}
-
             </div>
 
             {/* Affichage du total uniquement si il y a au moins une dépense */}

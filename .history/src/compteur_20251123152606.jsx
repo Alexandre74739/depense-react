@@ -5,7 +5,7 @@ function Compteur() {
     const [date, setDate] = useState("");
     const [number, setNumber] = useState(0)
     const [spend, setSpend] = useState([]);
-    const [total, setTotal] = useState(0);
+    const [total, setTotal] = useState();
 
     // Converti une date en format JJ/MM/AAAA
     const formatDate = (dateString) => {
@@ -43,9 +43,8 @@ function Compteur() {
     // Suppression d'une dépense
     const deleteSpend = (id) => {
         const itemDelete = spend.find(item => item.id === id);
-        setTotal(prevTotal => prevTotal - itemDelete.number);
 
-        // Met à jour le tableau spend en gardant tous les éléments sauf celui dont l’id correspond à celui à supprimer
+        setTotal(prevTotal => prevTotal - itemDelete.number);
         setSpend(spend.filter(item => item.id !== id));
     };
 

@@ -43,9 +43,10 @@ function Compteur() {
     // Suppression d'une dépense
     const deleteSpend = (id) => {
         const itemDelete = spend.find(item => item.id === id);
+
         setTotal(prevTotal => prevTotal - itemDelete.number);
 
-        // Met à jour le tableau spend en gardant tous les éléments sauf celui dont l’id correspond à celui à supprimer
+        // Met à jour le tableau spend en gardant tous les éléments sauf celui dont l’id correspond à celui à supprimer.
         setSpend(spend.filter(item => item.id !== id));
     };
 
