@@ -24,7 +24,7 @@ function Compteur() {
     const addSpend = () => {
         if (!isValid) return;
         setSpend([...spend, { date, number }]);
-
+            
         // Calcul le total des dépenses
         setTotal(prevTotal => prevTotal + parseFloat(number)); // prevTotal est la valeur la plus récente
 
@@ -47,8 +47,8 @@ function Compteur() {
                     onChange={(e) => setNumber(e.target.value)}
                     placeholder="Montant du mois en €"
                 />
-                <button
-                    className="submit"
+                <button 
+                    className="submit" 
                     onClick={addSpend}
                     disabled={!isValid}
                 >
@@ -60,15 +60,13 @@ function Compteur() {
             {/* Affichage des cards */}
             <div className="card-container">
                 {spend
-                    .slice()    // Copie le tableau pour ne pas modifier directement le state
-                    .sort((a, b) => new Date(a.date) - new Date(b.date))    // Tri croissant
-                    .map((item, index) => (
-                        <div key={index} className="card">
-                            <p className="date">{formatDate(item.date)}</p>
-                            <p>Dépense : {item.number} €</p>
-                            <button className="delete-btn">X</button>
-                        </div>
-                    ))}
+                .map((item, index) => (
+                    <div key={index} className="card">
+                        <p className="date">{formatDate(item.date)}</p>
+                        <p>Dépense : {item.number} €</p>
+                        <button className="delete-btn">X</button>
+                    </div>
+                ))}
             </div>
 
             {/* Affichage du total uniquement si il y a au moins une dépense */}

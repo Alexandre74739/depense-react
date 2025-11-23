@@ -60,8 +60,8 @@ function Compteur() {
             {/* Affichage des cards */}
             <div className="card-container">
                 {spend
-                    .slice()    // Copie le tableau pour ne pas modifier directement le state
-                    .sort((a, b) => new Date(a.date) - new Date(b.date))    // Tri croissant
+                    .slice()
+                    .sort((a, b))
                     .map((item, index) => (
                         <div key={index} className="card">
                             <p className="date">{formatDate(item.date)}</p>
